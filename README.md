@@ -1,7 +1,9 @@
-# <p align="center"><span style="color: green">Encrypt</span>Lab</p>
+<p align="center">
+    <img src="encryptlab.png"></img>
+</p>
 
-<p align="center" style="font-size: 0.75em">
-    A Free Encrypt & Decrypt Tools with example code.
+<p align="center">
+    A Free and Comprehensive Encrypt & Decrypt Tools with example code in Node.js.
 </p>
 
 <span align="center">
@@ -14,7 +16,7 @@
 
 </span>
 
-The purpose of EncryptLab is to make it easier for developers to understand how each encryption works with tools and example code.
+The purpose of EncryptLab is to make it easier for developers to understand how each encryption works with tools and example code in Node.js.
 
 ### List of Available Encryption
 
@@ -31,19 +33,6 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 ### Contributing
 
 Want to make EncryptLab more perfect? Let's contribute and follow the [contribution guide](.github/CONTRIBUTING.md).
-
-### Contributors
-
-Thanks for your contribution to EncryptLab!
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-</table>
-<!-- markdownlint-enable -->
-<!-- prettier-ignore-end -->
-<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ### License
 

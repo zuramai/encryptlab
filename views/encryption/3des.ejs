@@ -1,0 +1,213 @@
+<div class="encryption">
+    <div class="text-3xl mt-5" id="3des">Triple DES</div>
+    <div class="flex">
+      <div x-data={show:false,animate:false}>
+        <p x-on:click.prevent="show=!show,animate=!animate" class="flex p-2 cursor-pointer">
+          <a class="focus:outline-none mr-2 font-bold">
+            Example Code 
+          </a>
+          <i x-show="!show" class="mt-2 fas fa-sort-up"></i>
+          <i x-show="show" class="mb-2 fas fa-sort-down"></i>
+        </p> 
+        <div x-show="show,animate" 
+          x-transition:enter="transition linear duration-500" 
+          x-transition:enter-start="opacity-0 transform scale-90" 
+          x-transition:enter-end="opacity-100 transform scale-100" 
+          class="border px-2 py-2 text-gray-700 mt-3">
+<pre>
+<code class="javascript">const crypto = require("crypto");
+
+function encrypt(data, key){
+const md5Key = crypto.createHash('md5').update(key).digest("hex").substr(0, 24);
+
+const cipher = crypto.createCipheriv('des-ede3', md5Key, '');
+
+let encrypted = cipher.update(data, 'utf8', 'base64');
+encrypted += cipher.final('base64');
+
+return encrypted;
+}
+
+function decrypt(data, key){
+const md5Key = crypto.createHash('md5').update(key).digest("hex").substr(0, 24);
+
+const decipher = crypto.createDecipheriv('des-ede3', md5Key, '');
+
+let decrypted = decipher.update(data, 'base64', 'utf8');
+decrypted += decipher.final('utf8');
+
+return decrypted;
+}
+
+let encrypted = encrypt("test","encryptlab");
+let decrypted = decrypt("A6fH4bsKKgw=","encryptlab");
+console.log(encrypted);
+console.log(decrypted);
+</code></pre>
+        </div>
+
+    <div class="encrypt mt-2" x-data={show:false,animate:false}>
+        <p x-on:click.prevent="show=!show,animate=!animate" class="flex p-2 cursor-pointer">
+        <a class="focus:outline-none mr-2 font-bold">
+            Encrypt
+        </a>
+        <i x-show="!show" class="mt-2 fas fa-sort-up"></i>
+        <i x-show="show" class="mb-2 fas fa-sort-down"></i>
+        </p> 
+        <div x-show="show,animate" 
+        x-transition:enter="transition linear duration-500" 
+        x-transition:enter-start="opacity-0 transform scale-90" 
+        x-transition:enter-end="opacity-100 transform scale-100">
+
+        <form class="w-full max-w-lg" action="/3des" method="POST" x-data="encrypt3des()" @submit.prevent="submitData">
+            <div class="flex flex-wrap mt-2 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="text">
+                Input text (Plain text)
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight border border-gray-700 focus:outline-none focus:bg-white" id="text" type="text" placeholder="Jane" x-model="formData.data">
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="key">
+                input secret key
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight border border-gray-700 focus:outline-none focus:bg-white" id="key" type="text" placeholder="Jane" x-model="formData.key"> 
+            </div>
+            </div>
+            <div class="flex flex-wrap mb-6">
+            <div class="w-full px-3">
+                <button class="bg-blue-600 hover:bg-blue-700 border-b-4 border-solid border-blue-800 px-4 py-2 text-white" id="encrypt3DES" x-text="buttonLabel" :disabled="loading">Encrypt!</button>
+            </div>
+            </div>
+            <div class="flex flex-wrap mb-6">
+            <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="encrypted">
+                Result
+                </label>
+                <input readonly class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight border border-gray-700 focus:outline-none focus:bg-white" id="encrypted" type="text" placeholder="Jane" x-model="message">
+            </div>
+            </div>
+        </form>
+
+        </div>  
+    </div>
+
+    <div class="decrypt mt-2" x-data={show:false,animate:false}>
+        <p x-on:click.prevent="show=!show,animate=!animate" class="flex p-2 cursor-pointer">
+        <a class="focus:outline-none mr-2 font-bold">
+            Decrypt
+        </a>
+        <i x-show="!show" class="mt-2 fas fa-sort-up"></i>
+        <i x-show="show" class="mb-2 fas fa-sort-down"></i>
+        </p> 
+        <div x-show="show,animate" 
+        x-transition:enter="transition linear duration-500" 
+        x-transition:enter-start="opacity-0 transform scale-90" 
+        x-transition:enter-end="opacity-100 transform scale-100">
+
+        <form class="w-full max-w-lg" x-data="decrypt3des()" @submit.prevent="submitData">
+            <div class="flex flex-wrap mt-2 mb-6">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="text">
+                Input text (base64)
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight border border-gray-700 focus:outline-none focus:bg-white" id="text" type="text" placeholder="Jane" x-model="formData.data">
+            </div>
+            <div class="w-full md:w-1/2 px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="key">
+                Input secret key
+                </label>
+                <input class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight border border-gray-700 focus:outline-none focus:bg-white" id="key" type="text" placeholder="Jane" x-model="formData.key">
+            </div>
+            </div>
+            <div class="flex flex-wrap mb-6">
+            <div class="w-full px-3">
+                <button class="bg-blue-600 hover:bg-blue-700 border-b-4 border-solid border-blue-800 px-4 py-2 text-white" id="encrypt3DES" x-text="buttonLabel" :disabled="loading">Decrypt!</button>
+            </div>
+            </div>
+            <div class="flex flex-wrap mb-6">
+            <div class="w-full px-3">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="decrypted">
+                Result
+                </label>
+                <input readonly class="appearance-none block w-full bg-gray-200 text-gray-700 rounded py-3 px-4 mb-3 leading-tight border border-gray-700 focus:outline-none focus:bg-white" id="decrypted" type="text" placeholder="Jane" x-model="message">
+            </div>
+            </div>
+        </form>
+
+        </div>  
+    </div>
+</div>
+</div>
+
+<script>
+function encrypt3des() {
+	return {
+		formData: {
+			data: '',
+			key: ''
+		},
+        message: '',
+        loading: false,
+        buttonLabel: 'Encrypt',
+
+        submitData() {
+            this.buttonLabel = 'encrypting...'
+            this.loading = true;
+            this.message = ''
+            
+            fetch('/3des/encrypt', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.formData)
+            })
+            .then(response => response.json())
+            .then((data) => {
+                this.message = data.message
+            })
+            .catch(() => {
+                this.message = 'Ooops! Something went wrong!'
+            })
+            .finally(() => {
+                this.loading = false;
+                this.buttonLabel = 'Encrypt'
+            })
+        }
+	}
+}
+
+function decrypt3des() {
+	return {
+		formData: {
+			data: '',
+			key: ''
+		},
+        message: '',
+        loading: false,
+        buttonLabel: 'Decrypt',
+        
+        submitData() {
+            this.buttonLabel = 'decrypting...'
+            this.loading = true;
+            this.message = ''
+            
+            fetch('/3des/decrypt', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(this.formData)
+            })
+            .then(response => response.json())
+            .then((data) => {
+                this.message = data.message
+            })
+            .catch(() => {
+                this.message = 'Ooops! Something went wrong!'
+            })
+            .finally(() => {
+                this.loading = false;
+                this.buttonLabel = 'Decrypt'
+            })
+        }
+	}
+}
+</script>

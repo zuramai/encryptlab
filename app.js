@@ -4,7 +4,12 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
-const indexRouter = require('./routes/index');
+const index = require('./routes/index');
+const tripleDes = require('./routes/3des');
+const aes = require('./routes/aes');
+const blowfish = require('./routes/blowfish');
+const rsa = require('./routes/rsa');
+const twofish = require('./routes/twofish');
 
 const app = express();
 
@@ -18,7 +23,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+app.use('/', index);
+app.use('/3des', tripleDes);
+app.use('/aes', aes);
+app.use('/blowfish', blowfish);
+app.use('/rsa', rsa);
+app.use('/twofish', twofish);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
