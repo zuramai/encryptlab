@@ -1,11 +1,21 @@
 {
-  "projectName": "all-contributors",
-  "projectOwner": "all-contributors",
+  "projectName": "encryptlab",
+  "projectOwner": "fauzan121002",
   "files": [
     "README.md"
   ],
   "imageSize": 120,
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "zuramai",
+      "name": "Ahmad Saugi",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/45036724?v=4",
+      "profile": "http://ahmadsaugi.com",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
   "repoType": "github",
   "contributorsPerLine": 7,
   "repoHost": "https://github.com",
