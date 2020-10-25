@@ -20,7 +20,7 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 
 ### List of Available Encryption
 
-* Triple DES
+* [Triple DES](#tripledes)
 
 * RSA
 
@@ -30,6 +30,130 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 
 * AES
 
+# API 
+Here's open and free API that you can use for development.
+
+### Triple DES {#3des}
+- **Encrypt**
+    
+    **API URL:** `https://encryptlab.tech/3des/encrypt`  
+    **Method:**  `POST`   
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The plain text you want to encrypt |
+    | key | String | Encrypt secret key |
+- **Decrypt**  
+
+    **API URL:** `https://encryptlab.tech/3des/encrypt`    
+    **Method:**  `POST`     
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The encrypted text you want to decrypt |
+    | key | String | Secret key when you encrypt |
+    
+    
+### RSA
+- **Encrypt**
+    
+    **API URL:** `https://encryptlab.tech/rsa/encrypt`  
+    **Method:**  `POST`   
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The plain text you want to encrypt |
+    | key | String | Encrypt secret key |
+- **Decrypt**  
+
+    **API URL:** `https://encryptlab.tech/rsa/encrypt`    
+    **Method:**  `POST`     
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The encrypted text you want to decrypt |
+    | key | String | Secret key when you encrypt |
+    
+### Blowfish
+- **Encrypt**
+    
+    **API URL:** `https://encryptlab.tech/blowfish/encrypt`  
+    **Method:**  `POST`   
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The plain text you want to encrypt |
+    | key | String | Encrypt secret key |
+    | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
+    | iv   | String |  Initialization Vector  |
+- **Decrypt**  
+
+    **API URL:** `https://encryptlab.tech/blowfish/encrypt`    
+    **Method:**  `POST`     
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The encrypted text you want to decrypt |
+    | key | String | Secret key when you encrypt |
+    | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
+    | iv   | String |  Initialization Vector  |
+    
+### Twofish
+- **Encrypt**
+    
+    **API URL:** `https://encryptlab.tech/twofish/encrypt`  
+    **Method:**  `POST`   
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The plain text you want to encrypt |
+    | key | String | Encrypt secret key |
+- **Decrypt**  
+
+    **API URL:** `https://encryptlab.tech/twofish/encrypt`    
+    **Method:**  `POST`     
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The encrypted text you want to decrypt |
+    | key | String | Secret key when you encrypt |
+    
+### AES
+- **Encrypt**
+    
+    **API URL:** `https://encryptlab.tech/aes/encrypt`  
+    **Method:**  `POST`   
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The plain text you want to encrypt |
+    | key | String | Encrypt secret key |
+    | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
+    | iv   | String |  Initialization Vector  |
+    | bit || Number | Number of bit | 
+- **Decrypt**  
+
+    **API URL:** `https://encryptlab.tech/aes/encrypt`    
+    **Method:**  `POST`     
+    
+    **Request body:**
+    | Name | Type | Description | 
+    | ---- | ---- | ----------- |
+    | data | String | The encrypted text you want to decrypt |
+    | key | String | Secret key when you encrypt |
+    | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
+    | iv   | String |  Initialization Vector  |
+    | bit || Number | Number of bit |
+    
 ### Contributing
 
 Want to make EncryptLab more perfect? Let's contribute and follow the [contribution guide](.github/CONTRIBUTING.md).
