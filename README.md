@@ -66,7 +66,7 @@ Here's open and free API that you can use for development.
     | Name | Type | Description | 
     | ---- | ---- | ----------- |
     | data | String | The plain text you want to encrypt |
-    | key | String | Encrypt secret key |
+    | key | String | The RSA public key you have |
 - **Decrypt**  
 
     **API URL:** `https://encryptlab.tech/rsa/encrypt`    
@@ -76,7 +76,7 @@ Here's open and free API that you can use for development.
     | Name | Type | Description | 
     | ---- | ---- | ----------- |
     | data | String | The encrypted text you want to decrypt |
-    | key | String | Secret key when you encrypt |
+    | key | String | The RSA private key you have |
     
 ### Blowfish
 - **Encrypt**
@@ -90,7 +90,7 @@ Here's open and free API that you can use for development.
     | data | String | The plain text you want to encrypt |
     | key | String | Encrypt secret key |
     | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
-    | iv   | String |  Initialization Vector  |
+    | iv   | String |  Initialization Vector (max length: 8) |
 - **Decrypt**  
 
     **API URL:** `https://encryptlab.tech/blowfish/encrypt`    
@@ -102,7 +102,7 @@ Here's open and free API that you can use for development.
     | data | String | The encrypted text you want to decrypt |
     | key | String | Secret key when you encrypt |
     | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
-    | iv   | String |  Initialization Vector  |
+    | iv   | String |  Initialization Vector (max length: 8) |
     
 ### Twofish
 - **Encrypt**
@@ -136,10 +136,10 @@ Here's open and free API that you can use for development.
     | Name | Type | Description | 
     | ---- | ---- | ----------- |
     | data | String | The plain text you want to encrypt |
-    | key | String | Encrypt secret key |
+    | key | String | Encrypt secret key (max length: for 128 bit: 8, for 192 bit: 16, for 256 bit: 32) |
     | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
-    | iv   | String |  Initialization Vector  |
-    | bit || Number | Number of bit | 
+    | iv   | String |  Initialization Vector (max length: 8)  |
+    | bit | Number | Number of bit | 
 - **Decrypt**  
 
     **API URL:** `https://encryptlab.tech/aes/encrypt`    
@@ -149,10 +149,10 @@ Here's open and free API that you can use for development.
     | Name | Type | Description | 
     | ---- | ---- | ----------- |
     | data | String | The encrypted text you want to decrypt |
-    | key | String | Secret key when you encrypt |
+    | key | String | Secret key when you encrypt (max length: for 128 bit: 8, for 192 bit: 16, for 256 bit: 32) |
     | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
-    | iv   | String |  Initialization Vector  |
-    | bit || Number | Number of bit |
+    | iv   | String |  Initialization Vector (max length: 8) |
+    | bit | Number | Number of bit |
     
 ### Contributing
 
@@ -162,4 +162,4 @@ Want to make EncryptLab more perfect? Let's contribute and follow the [contribut
 
 EncryptLab is under the [MIT License](LICENSE.md)
 
-[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://GitHub.com/Naereen/)
+[![ForTheBadge built-with-love](http://ForTheBadge.com/images/badges/built-with-love.svg)](https://gitHub.com/fauzan121002/)
