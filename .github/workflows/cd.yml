@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: executing remote ssh commands using password
+    - name: Deploy website
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST }}
@@ -18,6 +18,8 @@ jobs:
         key: ${{ secrets.PRIVATE_KEY }}
         port: 22
         script: |
+          export NVM_DIR=~/.nvm
+          source ~/.nvm/nvm.sh
           cd ~/encryptlab
           git pull origin master
           git status
