@@ -1,0 +1,15 @@
+{
+  "projectName": "all-contributors",
+  "projectOwner": "all-contributors",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 120,
+  "contributors": [],
+  "repoType": "github",
+  "contributorsPerLine": 7,
+  "repoHost": "https://github.com",
+  "commit": true,
+  "commitConvention": "none",
+  "skipCi": true
+}
