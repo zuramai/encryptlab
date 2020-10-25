@@ -7,6 +7,15 @@
   "imageSize": 120,
   "contributors": [
     {
+      "login": "fauzan121002",
+      "name": "Muhammad Fauzan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/50759463?v=4",
+      "profile": "http://fauzan.tech",
+      "contributions": [
+        "maintenance"
+      ],
+    },
+    }
       "login": "zuramai",
       "name": "Ahmad Saugi",
       "avatar_url": "https://avatars2.githubusercontent.com/u/45036724?v=4",
