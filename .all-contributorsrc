@@ -1,11 +1,21 @@
 {
-  "projectName": "all-contributors",
-  "projectOwner": "all-contributors",
+  "projectName": "encryptlab",
+  "projectOwner": "fauzan121002",
   "files": [
     "README.md"
   ],
   "imageSize": 120,
-  "contributors": [],
+  "contributors": [
+    {
+      "login": "fauzan121002",
+      "name": "Muhammad Fauzan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/50759463?v=4",
+      "profile": "http://fauzan.tech",
+      "contributions": [
+        "maintenance"
+      ]
+    }
+  ],
   "repoType": "github",
   "contributorsPerLine": 7,
   "repoHost": "https://github.com",
