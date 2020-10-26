@@ -21,7 +21,7 @@ router.post('/encrypt', async function(req, res, next) {
         });
     }catch(e){
         return res.status(422).json({
-            message: e,
+            message: Object.keys(e).length ? e.reason : "encrypt failed",
         });
     }
 
@@ -46,7 +46,7 @@ router.post('/decrypt', async function(req, res, next) {
         });
     }catch(e){
         return res.status(422).json({
-            message: e,
+            message: Object.keys(e).length ? e.reason : "decrypt failed",
         });
     }
 });
