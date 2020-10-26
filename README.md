@@ -22,18 +22,18 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 
 * [Triple DES](#tripledes)
 
-* RSA
+* [RSA](#rsa)
 
-* Blowfish
+* [Blowfish](#blowfish)
 
-* Twofish
+* [Twofish](#twofish)
 
-* AES
+* [AES](#aes)
 
 # API 
 Here's open and free API that you can use for development.
 
-### Triple DES {#3des}
+### Triple DES <a name="tripledes"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/3des/encrypt`  
@@ -46,7 +46,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/3des/encrypt`    
+    **API URL:** `https://encryptlab.tech/3des/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -56,7 +56,7 @@ Here's open and free API that you can use for development.
     | key | String | Secret key when you encrypt |
     
     
-### RSA
+### RSA <a name="rsa"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/rsa/encrypt`  
@@ -69,7 +69,7 @@ Here's open and free API that you can use for development.
     | key | String | The RSA public key you have |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/rsa/encrypt`    
+    **API URL:** `https://encryptlab.tech/rsa/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -78,7 +78,7 @@ Here's open and free API that you can use for development.
     | data | String | The encrypted text you want to decrypt |
     | key | String | The RSA private key you have |
     
-### Blowfish
+### Blowfish <a name="blowfish"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/blowfish/encrypt`  
@@ -93,7 +93,7 @@ Here's open and free API that you can use for development.
     | iv   | String |  Initialization Vector (max length: 8) |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/blowfish/encrypt`    
+    **API URL:** `https://encryptlab.tech/blowfish/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -104,7 +104,7 @@ Here's open and free API that you can use for development.
     | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
     | iv   | String |  Initialization Vector (max length: 8) |
     
-### Twofish
+### Twofish <a name="twofish"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/twofish/encrypt`  
@@ -117,7 +117,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/twofish/encrypt`    
+    **API URL:** `https://encryptlab.tech/twofish/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -126,7 +126,7 @@ Here's open and free API that you can use for development.
     | data | String | The encrypted text you want to decrypt |
     | key | String | Secret key when you encrypt |
     
-### AES
+### AES <a name="aes"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/aes/encrypt`  
@@ -142,7 +142,7 @@ Here's open and free API that you can use for development.
     | bit | Number | Number of bit | 
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/aes/encrypt`    
+    **API URL:** `https://encryptlab.tech/aes/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
