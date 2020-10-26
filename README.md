@@ -46,7 +46,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/3des/encrypt`    
+    **API URL:** `https://encryptlab.tech/3des/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -69,7 +69,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/rsa/encrypt`    
+    **API URL:** `https://encryptlab.tech/rsa/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -93,7 +93,7 @@ Here's open and free API that you can use for development.
     | iv   | String |  Initialization Vector  |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/blowfish/encrypt`    
+    **API URL:** `https://encryptlab.tech/blowfish/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -117,7 +117,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/twofish/encrypt`    
+    **API URL:** `https://encryptlab.tech/twofish/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -142,7 +142,7 @@ Here's open and free API that you can use for development.
     | bit || Number | Number of bit | 
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/aes/encrypt`    
+    **API URL:** `https://encryptlab.tech/aes/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
