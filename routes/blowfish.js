@@ -3,7 +3,7 @@ let router = express.Router();
 const { blowfish } = require('../src');
 
 /* POST Encrypt. */
-router.post('/encrypt', function(req, res, next) {
+router.post('/encrypt', async function(req, res, next) {
     if(!req.body.data
         || !req.body.mode
         || !req.body.key
@@ -12,20 +12,21 @@ router.post('/encrypt', function(req, res, next) {
             message: "Please fill all the field.",
         });
 
-    const encrypted = blowfish.encrypt(req.body.data,req.body.mode,req.body.key,req.body.iv);
-
-    if(!encrypted)
-        return res.status(422).json({
-            message: "Encrypt failed."
+    try{
+        const encrypted = await blowfish.encrypt(req.body.data,req.body.mode,req.body.key,req.body.iv);
+        
+        return res.status(200).json({
+            message: encrypted,
         });
-    
-    return res.status(200).json({
-        message: encrypted,
-    });
+    }catch(e){
+        return res.status(422).json({
+            message: e,
+        });
+    }
 });
 
 /* POST Decrypt. */
-router.post('/decrypt', function(req, res, next) {
+router.post('/decrypt', async function(req, res, next) {
     if(!req.body.data 
         || !req.body.mode
         || !req.body.key
@@ -34,16 +35,17 @@ router.post('/decrypt', function(req, res, next) {
             message: "Please fill all the field.",
         });
 
-    const decrypted = blowfish.decrypt(req.body.data,req.body.mode,req.body.key,req.body.iv);
-
-    if(!decrypted)
-        return res.status(422).json({
-            message: "Encrypt failed."
+    try{
+        const decrypted = await blowfish.decrypt(req.body.data,req.body.mode,req.body.key,req.body.iv);
+        
+        return res.status(200).json({
+            message: decrypted,
         });
-    
-    return res.status(200).json({
-        message: decrypted,
-    });
+    }catch(e){
+        return res.status(422).json({
+            message: e,
+        });
+    }
 });
 
 module.exports = router;

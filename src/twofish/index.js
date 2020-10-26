@@ -1,7 +1,7 @@
 const { twofish } = require('twofish');
 const encrypter = twofish();
 
-module.exports.encrypt = (data,secret_key) => {
+module.exports.encrypt = async (data,secret_key) => {
     const secretKey = Buffer.from(secret_key);
     const plainText = Buffer.from(data);
     const cypherText = encrypter.encrypt(secretKey, plainText);
@@ -10,7 +10,7 @@ module.exports.encrypt = (data,secret_key) => {
     return base64Cypher;
 }
 
-module.exports.decrypt = (data,secret_key) => {
+module.exports.decrypt = async (data,secret_key) => {
     const secretKey = Buffer.from(secret_key);
     const cypherText = Buffer.from(data,"base64");
     const plainText = encrypter.decrypt(secretKey, cypherText);

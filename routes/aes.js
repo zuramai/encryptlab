@@ -3,7 +3,7 @@ let router = express.Router();
 const { aes } = require('../src');
 
 /* POST Encrypt. */
-router.post('/encrypt', function(req, res, next) {
+router.post('/encrypt', async function(req, res, next) {
     if(!req.body.data 
         || !req.body.bit
         || !req.body.mode
@@ -13,20 +13,22 @@ router.post('/encrypt', function(req, res, next) {
             message: "Please fill all the field.",
         });
 
-    const encrypted = aes.encrypt(req.body.data,req.body.bit,req.body.mode,Buffer.from(req.body.key),Buffer.from(req.body.iv));
-
-    if(!encrypted)
-        return res.status(422).json({
-            message: "Encrypt failed."
+    try{
+        const encrypted = await aes.encrypt(req.body.data,req.body.bit,req.body.mode,Buffer.from(req.body.key),Buffer.from(req.body.iv));
+        
+        return res.status(200).json({
+            message: encrypted,
         });
-    
-    return res.status(200).json({
-        message: encrypted,
-    });
+    }catch(e){
+        return res.status(422).json({
+            message: e,
+        });
+    }
+
 });
 
 /* POST Decrypt. */
-router.post('/decrypt', function(req, res, next) {
+router.post('/decrypt', async function(req, res, next) {
     if(!req.body.data 
         || !req.body.bit
         || !req.body.mode
@@ -36,16 +38,17 @@ router.post('/decrypt', function(req, res, next) {
             message: "Please fill all the field.",
         });
 
-    const decrypted = aes.decrypt(req.body.data,req.body.bit,req.body.mode,Buffer.from(req.body.key),Buffer.from(req.body.iv));
-
-    if(!decrypted)
-        return res.status(422).json({
-            message: "Encrypt failed."
+    try{
+        const decrypted = await aes.decrypt(req.body.data,req.body.bit,req.body.mode,Buffer.from(req.body.key),Buffer.from(req.body.iv));
+        
+        return res.status(200).json({
+            message: decrypted,
         });
-    
-    return res.status(200).json({
-        message: decrypted,
-    });
+    }catch(e){
+        return res.status(422).json({
+            message: e,
+        });
+    }
 });
 
 module.exports = router;
