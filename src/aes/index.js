@@ -1,6 +1,6 @@
 const crypto = require('crypto');
 
-module.exports.encrypt = (data,bit,mode,enc_key,iv) => {
+module.exports.encrypt = async (data,bit,mode,enc_key,iv) => {
     const cipher = crypto.createCipheriv('aes-'+bit+'-'+mode, enc_key, iv);
 
     let encrypted = cipher.update(data, 'utf8', 'base64');
@@ -8,7 +8,7 @@ module.exports.encrypt = (data,bit,mode,enc_key,iv) => {
     return encrypted;
 }
 
-module.exports.decrypt = (data,bit,mode,enc_key,iv) => {
+module.exports.decrypt = async (data,bit,mode,enc_key,iv) => {
     const decipher = crypto.createDecipheriv('aes-'+bit+'-'+mode, enc_key, iv);
 
     let decrypted = decipher.update(data, 'base64', 'utf8');

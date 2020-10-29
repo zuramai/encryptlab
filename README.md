@@ -9,7 +9,7 @@
 <div align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-0-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![tag](https://img.shields.io/github/tag/fauzan121002/encryptlab.svg)](https://github.com/fauzan121002/encryptlab) [![CI](https://github.com/fauzan121002/encryptlab/workflows/Node.js%20CI/badge.svg)](https://github.com/fauzan121002/encryptlab/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/fauzan121002/encryptlab/blob/master/LICENSE) [![Issue](https://img.shields.io/github/issues/fauzan121002/encryptlab)](https://img.shields.io/github/issues/fauzan121002/encryptlab) [![Forks](https://img.shields.io/github/forks/fauzan121002/encryptlab)](https://img.shields.io/github/forks/fauzan121002/encryptlab) [![Stars](https://img.shields.io/github/stars/fauzan121002/encryptlab)](https://img.shields.io/github/stars/fauzan121002/encryptlab)
@@ -22,18 +22,18 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 
 * [Triple DES](#tripledes)
 
-* RSA
+* [RSA](#rsa)
 
-* Blowfish
+* [Blowfish](#blowfish)
 
-* Twofish
+* [Twofish](#twofish)
 
-* AES
+* [AES](#aes)
 
 # API 
 Here's open and free API that you can use for development.
 
-### Triple DES {#3des}
+### Triple DES <a name="tripledes"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/3des/encrypt`  
@@ -46,7 +46,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/3des/encrypt`    
+    **API URL:** `https://encryptlab.tech/3des/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -56,7 +56,7 @@ Here's open and free API that you can use for development.
     | key | String | Secret key when you encrypt |
     
     
-### RSA
+### RSA <a name="rsa"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/rsa/encrypt`  
@@ -69,7 +69,7 @@ Here's open and free API that you can use for development.
     | key | String | The RSA public key you have |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/rsa/encrypt`    
+    **API URL:** `https://encryptlab.tech/rsa/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -78,7 +78,7 @@ Here's open and free API that you can use for development.
     | data | String | The encrypted text you want to decrypt |
     | key | String | The RSA private key you have |
     
-### Blowfish
+### Blowfish <a name="blowfish"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/blowfish/encrypt`  
@@ -93,7 +93,7 @@ Here's open and free API that you can use for development.
     | iv   | String |  Initialization Vector (max length: 8) |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/blowfish/encrypt`    
+    **API URL:** `https://encryptlab.tech/blowfish/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -104,7 +104,7 @@ Here's open and free API that you can use for development.
     | mode | String | Available values: `cfb,cbc,ctr,gcm,ofb` |
     | iv   | String |  Initialization Vector (max length: 8) |
     
-### Twofish
+### Twofish <a name="twofish"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/twofish/encrypt`  
@@ -117,7 +117,7 @@ Here's open and free API that you can use for development.
     | key | String | Encrypt secret key |
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/twofish/encrypt`    
+    **API URL:** `https://encryptlab.tech/twofish/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -126,7 +126,7 @@ Here's open and free API that you can use for development.
     | data | String | The encrypted text you want to decrypt |
     | key | String | Secret key when you encrypt |
     
-### AES
+### AES <a name="aes"></a>
 - **Encrypt**
     
     **API URL:** `https://encryptlab.tech/aes/encrypt`  
@@ -142,7 +142,7 @@ Here's open and free API that you can use for development.
     | bit | Number | Number of bit | 
 - **Decrypt**  
 
-    **API URL:** `https://encryptlab.tech/aes/encrypt`    
+    **API URL:** `https://encryptlab.tech/aes/decrypt`    
     **Method:**  `POST`     
     
     **Request body:**
@@ -157,6 +157,25 @@ Here's open and free API that you can use for development.
 ### Contributing
 
 Want to make EncryptLab more perfect? Let's contribute and follow the [contribution guide](.github/CONTRIBUTING.md).
+
+### Contributors
+
+Thanks to all of you who spend times to build this repository.
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="http://fauzan.tech"><img src="https://avatars3.githubusercontent.com/u/50759463?v=4?s=120" width="120px;" alt=""/><br /><sub><b>Muhammad Fauzan</b></sub></a><br /><a href="#maintenance-fauzan121002" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="http://ahmadsaugi.com"><img src="https://avatars2.githubusercontent.com/u/45036724?v=4?s=120" width="120px;" alt=""/><br /><sub><b>Ahmad Saugi</b></sub></a><br /><a href="https://github.com/fauzan121002/encryptlab/commits?author=zuramai" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ### License
 

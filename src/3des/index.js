@@ -1,6 +1,6 @@
 const crypto = require("crypto");
 
-module.exports.encrypt = (data, key) => {
+module.exports.encrypt = async (data, key) => {
   const md5Key = crypto.createHash('md5').update(key).digest("hex").substr(0, 24);
 
   const cipher = crypto.createCipheriv('des-ede3', md5Key, '');
@@ -11,7 +11,7 @@ module.exports.encrypt = (data, key) => {
   return encrypted;
 }
 
-module.exports.decrypt = (data, key) => {
+module.exports.decrypt = async (data, key) => {
   const md5Key = crypto.createHash('md5').update(key).digest("hex").substr(0, 24);
 
   const decipher = crypto.createDecipheriv('des-ede3', md5Key, '');
