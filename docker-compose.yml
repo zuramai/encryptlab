@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+
+  webserver:
+    container_name: encryptlab_webserver
+    build:
+      context: .
+      dockerfile: docker/webserver/Dockerfile
+    ports:
+      - '80:80'
+
+  app:
+    container_name: encryptlab_app
+    build:
+      context: .
+      dockerfile: docker/node/Dockerfile
+
+
