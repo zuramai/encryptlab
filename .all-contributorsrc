@@ -23,6 +23,24 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "andriawan",
+      "name": "Muhammad Irwan Andriawan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/13099373?v=4",
+      "profile": "https://andriawan.com",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "dihak",
+      "name": "Dihak",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/10445482?v=4",
+      "profile": "https://www.dihak.my.id",
+      "contributions": [
+        "design"
+      ]
     }
   ],
   "repoType": "github",
