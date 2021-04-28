@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
+    "dev": "node ./bin/www",
     "watch": "./node_modules/.bin/nodemon ./bin/www -e .ejs,.js,.html",
     "build:css": "./node_modules/.bin/postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css",
     "test": "./node_modules/.bin/jest"

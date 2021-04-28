@@ -29,6 +29,28 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 * [Twofish](#twofish)
 
 * [AES](#aes)
+
+### How to start Local Development ?
+
+```bash
+# first. install dependencies
+$ npm install
+
+# then. serve with hot reload at localhost:3000
+$ npm run dev
+
+# etc
+# build css for production
+$ npm run build:css
+# watch file changes
+$ npm run watch
+# run test
+$ npm run test
+```
+
+### Want to add any encryption method ?
+
+Feel free to create proposal in [repository Github Issue](https://github.com/fauzan121002/encryptlab/issues) to discuss it first before do your work.
     
 ### Contributing
 
