@@ -52,7 +52,7 @@ $ npm run test
 
 or
 
-```
+```bash
 # the server will listening on port 3000!
 npx encryptlab
 ```
