@@ -4,19 +4,21 @@
       <a href="https://github.com/fauzan121002/encryptlab">Fork EncryptLab on Github</a>
   </div>
 
-  <div class="container-lg p-3">
-    <h1 class="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl"><span class="text-green-700">Encrypt</span>Lab</h1>
-    <h4 class="text-xs sm:text-xs md:text-xs lg:text-xs xl:text-xs">Encrypt & Decrypt Tools With Example Code in Node.js</h4>
-
-    <div class="badges">
-      <img class="inline-block" src="https://img.shields.io/github/tag/fauzan121002/encryptlab.svg" alt="encryptlab - badge not found">
-      <img class="inline-block" src="https://github.com/fauzan121002/encryptlab/workflows/Node.js%20CI/badge.svg" alt="encryptlab - badge not found">
-      <img class="inline-block" src="https://img.shields.io/badge/License-MIT-blue.svg" alt="encryptlab - badge not found">
-    </div>
+  <div id="app">
 
     <%- include('navigation') -%>
 
-    <div class="content">
+    
+    <section class="section w-full bg-gradient-to-r  to-green-500 from-green-600 flex items-center justify-center flex-col" id="hero">
+      <h1 class='text-center text-4xl mb-5 text-white font-bold'>Encrypt & Decrypt Tools With Example Code in Node.js</h1>
+      <div>
+        <img class="inline-block" src="https://img.shields.io/github/tag/fauzan121002/encryptlab.svg" alt="encryptlab - badge not found">
+        <img class="inline-block" src="https://github.com/fauzan121002/encryptlab/workflows/Node.js%20CI/badge.svg" alt="encryptlab - badge not found">
+        <img class="inline-block" src="https://img.shields.io/badge/License-MIT-blue.svg" alt="encryptlab - badge not found">
+      </div>
+    </section>
+
+    <main class="content container mx-auto">
 
       <%- include('encryption/3des') -%>
 
@@ -28,6 +30,6 @@
 
       <%- include('encryption/aes') -%>
 
-  </div>
+    </main>
 
 <%- include('footer') -%>
