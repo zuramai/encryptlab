@@ -9,7 +9,9 @@
 <div align="center">
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![tag](https://img.shields.io/github/tag/fauzan121002/encryptlab.svg)](https://github.com/fauzan121002/encryptlab) [![CI](https://github.com/fauzan121002/encryptlab/workflows/Node.js%20CI/badge.svg)](https://github.com/fauzan121002/encryptlab/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/fauzan121002/encryptlab/blob/master/LICENSE) [![Issue](https://img.shields.io/github/issues/fauzan121002/encryptlab)](https://img.shields.io/github/issues/fauzan121002/encryptlab) [![Forks](https://img.shields.io/github/forks/fauzan121002/encryptlab)](https://img.shields.io/github/forks/fauzan121002/encryptlab) [![Stars](https://img.shields.io/github/stars/fauzan121002/encryptlab)](https://img.shields.io/github/stars/fauzan121002/encryptlab)
@@ -20,15 +22,15 @@ The purpose of EncryptLab is to make it easier for developers to understand how 
 
 ### List of Available Encryption
 
-* [Triple DES](#tripledes)
+- [Triple DES](#tripledes)
 
-* [RSA](#rsa)
+- [RSA](#rsa)
 
-* [Blowfish](#blowfish)
+- [Blowfish](#blowfish)
 
-* [Twofish](#twofish)
+- [Twofish](#twofish)
 
-* [AES](#aes)
+- [AES](#aes)
 
 ### How to start Local Development ?
 
@@ -48,10 +50,17 @@ $ npm run watch
 $ npm run test
 ```
 
+or
+
+```
+# the server will listening on port 3000!
+npx encryptlab
+```
+
 ### Want to add any encryption method ?
 
 Feel free to create proposal in [repository Github Issue](https://github.com/fauzan121002/encryptlab/issues) to discuss it first before do your work.
-    
+
 ### Contributing
 
 Want to make EncryptLab more perfect? Let's contribute and follow the [contribution guide](.github/CONTRIBUTING.md).
@@ -74,6 +83,7 @@ Thanks to all of you who spend times to build this repository.
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ### License
