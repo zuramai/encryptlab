@@ -25,6 +25,10 @@
     text-decoration: none;
 }
 
+section#hero {
+    min-height: 500px;
+}
+
 button:disabled {
     cursor: not-allowed;
     opacity: 0.5;

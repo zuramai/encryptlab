@@ -1,5 +1,10 @@
 <script src="/javascripts/fontawesome.min.js"></script>
 <script src="/javascripts/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
+<script>
+    document.querySelector('.btn-toggler').addEventListener('click', function() {
+        document.querySelector('.nav__menu').classList.toggle('hidden')
+    });
+</script>
 </body>
 </html>
