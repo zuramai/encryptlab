@@ -2,6 +2,9 @@
   "name": "encryptlab",
   "version": "0.1.1",
   "private": true,
+  "bin": {
+    "encryptlab": "./bin/www"
+  },
   "scripts": {
     "dev": "node ./bin/www",
     "watch": "./node_modules/.bin/nodemon ./bin/www -e .ejs,.js,.html",
